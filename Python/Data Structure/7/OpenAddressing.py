@@ -5,6 +5,9 @@ table = [0] * M  # create hash table
 def hashFunction(key): 
     return key % M
 
+def getLinear(v, i):
+    return (v + i) % M  # calculate address of value
+
 def hashFunction2(key): 
     return 11 - (key % 11)  # (biggest prime number smaller than M) - (key % (biggest prime number smaller than M))
 
@@ -55,9 +58,6 @@ def insert(key):
             return
         else:
             i += 1  # else, move to right until an empty address appears
-
-def getLinear(v, i): 
-    return (v + i) % M  # calculate address of value
 
 def getQuadratic(v, i): 
     return (v + i*i) % M
