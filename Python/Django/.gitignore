@@ -1,7 +1,0 @@
-.idea
-venv
-db.sqlite3
-__pycache__
-/staticfiles
-/mediafiles
-.DS_Store
